@@ -161,3 +161,22 @@ function showResult() {
 }
 
 playButton.addEventListener("click", startQuiz);
+
+// Блокировка ориентации экрана
+function lockOrientation() {
+    // Проверяем, поддерживается ли API блокировки ориентации экрана
+    if (screen.orientation && screen.orientation.lock) {
+        try {
+            // Пытаемся заблокировать ориентацию в портретной
+            screen.orientation.lock("portrait");
+            console.log("Ориентация экрана заблокирована в портретной.");
+        } catch (error) {
+            console.error("Не удалось заблокировать ориентацию экрана:", error);
+        }
+    } else {
+        console.warn("API блокировки ориентации экрана не поддерживается.");
+    }
+}
+
+// Вызываем функцию блокировки ориентации при загрузке страницы
+window.addEventListener("load", lockOrientation);
