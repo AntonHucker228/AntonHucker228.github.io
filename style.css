@@ -1,3 +1,4 @@
+/* Общие стили */
 body {
     font-family: sans-serif;
     display: flex;
@@ -5,6 +6,7 @@ body {
     align-items: center;
     min-height: 100vh;
     background-color: #f0f0f0;
+    margin: 0; /* Убираем стандартные отступы body */
 }
 
 #container {
@@ -13,17 +15,19 @@ body {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     text-align: center;
-    width: 500px;
+    width: 100%; /* Занимает всю ширину контейнера */
+    height: 100%; /* Занимает всю высоту контейнера */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Стили для обложки */
 #cover {
-    position: fixed; /* Фиксированное положение */
-    top: 0;
-    left: 0;
+    position: relative; /* Важно для правильного позиционирования */
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный белый фон */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -98,10 +102,29 @@ body {
     background-color: #367c39;
 }
 
-/* ... предыдущие стили ... */
+/* Стили для результата */
+#result {
+    text-align: center;
+}
 
 #result img {
     width: 200px;
     border-radius: 8px;
     margin-top: 10px;
+}
+
+/* Адаптивные стили */
+@media (max-width: 600px) {
+    #container {
+        padding: 10px;
+    }
+    #coverImage {
+        max-width: 95%;
+    }
+    #question {
+        font-size: 18px;
+    }
+    #answers button {
+        font-size: 14px;
+    }
 }
