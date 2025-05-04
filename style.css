@@ -31,13 +31,14 @@ body {
     z-index: 10; /* Отображать поверх всего */
 }
 
-#coverImage {
+/*#coverImage {
     max-width: 90%;  /* Ограничиваем ширину картинки, чтобы не вылезала за края */
-    max-height: 70%; /* Ограничиваем высоту картинки */
-    border-radius: 8px;
+/*    max-height: 70%; /* Ограничиваем высоту картинки */
+/*    border-radius: 8px;
     margin-bottom: 20px;
     object-fit: contain; /* Картинка помещается в контейнер с сохранением пропорций */
 }
+
 
 #playButton {
     padding: 12px 24px;
