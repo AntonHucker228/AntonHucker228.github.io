@@ -1,3 +1,4 @@
+/* Общие стили */
 body {
     font-family: sans-serif;
     display: flex;
@@ -5,72 +6,66 @@ body {
     align-items: center;
     min-height: 100vh;
     background-color: #f0f0f0;
+    margin: 0;
 }
 
 #container {
     background-color: white;
-    padding: 20px;
+    padding: 5%; /* Относительные отступы */
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     text-align: center;
-    width: 500px;
+    width: 80%; /* Контейнер занимает 80% ширины экрана */
+    max-width: 600px; /* Максимальная ширина контейнера */
+    margin: 0 auto; /* Центрируем контейнер */
 }
 
 /* Стили для обложки */
 #cover {
-    position: fixed; /* Фиксированное положение */
-    top: 0;
-    left: 0;
+    position: relative;
     width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный белый фон */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 10; /* Отображать поверх всего */
+    text-align: center;
 }
 
 #coverImage {
-    max-width: 90%;  /* Ограничиваем ширину картинки, чтобы не вылезала за края */
-    max-height: 70%; /* Ограничиваем высоту картинки */
+    max-width: 90%;
+    max-height: 70%;
     border-radius: 8px;
-    margin-bottom: 20px;
-    object-fit: contain; /* Картинка помещается в контейнер с сохранением пропорций */
+    margin-bottom: 5%;
+    object-fit: contain;
 }
 
-
 #playButton {
-    padding: 12px 24px;
-    background-color: #FFC107; /* Желтый цвет */
-    color: #333; /* Темно-серый текст */
+    padding: 3% 6%; /* Относительные отступы */
+    background-color: #FFC107;
+    color: #333;
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1.2em; /* Относительный размер шрифта */
 }
 
 #playButton:hover {
-    background-color: #FFA000; /* Более темный желтый цвет при наведении */
+    background-color: #FFA000;
 }
 
 /* Стили для вопросов */
 #question {
-    font-size: 20px;
-    margin-bottom: 20px;
+    font-size: 1.5em; /* Относительный размер шрифта */
+    margin-bottom: 5%;
 }
 
 #answers button {
     display: block;
     width: 100%;
-    padding: 12px;
-    margin-bottom: 10px;
-    background-color: white; /* Белые кнопки */
+    padding: 3%; /* Относительные отступы */
+    margin-bottom: 2%;
+    background-color: white;
     color: #333;
     border: 1px solid #ccc;
-    border-radius: 20px; /* Закругленные углы */
+    border-radius: 20px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1em; /* Относительный размер шрифта */
     text-align: left;
 }
 
@@ -79,73 +74,61 @@ body {
 }
 
 #answers button.selected {
-    background-color: #a1a1a1; /* Более темный желтый цвет */
+    background-color: #a1a1a1;
     color: #333;
 }
 
 #nextButton {
-    padding: 12px 24px;
+    padding: 3% 6%; /* Относительные отступы */
     background-color: #4CAF50;
     color: white;
     border: none;
-    border-radius: 20px; /* Закругленные углы */
+    border-radius: 20px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1.2em; /* Относительный размер шрифта */
     display: none;
-    margin-top: 20px;
+    margin-top: 5%;
 }
 
 #nextButton:hover {
     background-color: #367c39;
 }
 
-/* ... предыдущие стили ... */
+/* Стили для результата */
+#result {
+    text-align: center;
+}
 
 #result img {
-    width: 600px;
+    width: 80%; /* Изображение занимает 80% ширины контейнера */
+    max-width: 500px; /* Максимальная ширина изображения - 500px */
     border-radius: 8px;
-    margin-top: 10px;
+    margin-top: 5%;
 }
 
-
-
-
-
-/* Для больших экранов (ширина больше 1200px) */
-@media (min-width: 1200px) {
-    #container {
-        width: 800px; /* Большая ширина контейнера */
-        padding: 30px; /* Большие отступы */
-    }
-    #coverImage {
-        max-width: 70%; /* Большая картинка */
-    }
-}
-
-/* Для средних экранов (ширина от 600px до 1200px) */
-@media (min-width: 600px) and (max-width: 1200px) {
-    #container {
-        width: 600px; /* Средняя ширина контейнера */
-        padding: 20px; /* Средние отступы */
-    }
-    #coverImage {
-        max-width: 80%; /* Средняя картинка */
-    }
-}
-
-/* Для маленьких экранов (ширина меньше 600px) */
+/* Адаптивные стили */
 @media (max-width: 600px) {
     #container {
         width: 90%; /* Контейнер занимает 90% ширины экрана */
-        padding: 10px; /* Маленькие отступы */
-    }
-    #coverImage {
-        max-width: 90%; /* Картинка занимает 90% ширины */
+        padding: 3%; /* Меньшие отступы */
     }
     #question {
-        font-size: 16px; /* Меньший размер шрифта */
+        font-size: 1.2em; /* Меньший размер шрифта */
     }
     #answers button {
-        font-size: 14px; /* Меньший размер шрифта */
+        font-size: 0.9em; /* Меньший размер шрифта */
+    }
+}
+
+@media (min-width: 1200px) {
+    #container {
+        max-width: 800px; /* Большая максимальная ширина контейнера */
+        padding: 4%; /* Большие отступы */
+    }
+    #question {
+        font-size: 1.8em; /* Больший размер шрифта */
+    }
+    #answers button {
+        font-size: 1.1em; /* Больший размер шрифта */
     }
 }
