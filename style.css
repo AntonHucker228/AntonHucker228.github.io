@@ -15,8 +15,8 @@ body {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     text-align: center;
-    width: 100%; /* Занимает всю ширину контейнера */
-    /* height: 100%;  Убираем это временно */
+    /* width: 100%;  Убираем это */
+    /* height: 100%; Убираем это */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,14 +25,7 @@ body {
 
 /* Стили для обложки */
 #cover {
-    position: relative; /* Важно для правильного позиционирования */
-    width: 100%;
-    height: auto; /* Или, например, 500px */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 10; /* Отображать поверх всего */
+    text-align: center;
 }
 
 #coverImage {
@@ -40,7 +33,6 @@ body {
     max-height: 70%; /* Ограничиваем высоту картинки */
     border-radius: 8px;
     margin-bottom: 20px;
-    object-fit: contain; /* Картинка помещается в контейнер с сохранением пропорций */
 }
 
 #playButton {
