@@ -83,13 +83,13 @@ body {
 }
 
 #nextButton {
-    padding: 12px 24px;
+    padding: 1% 2%;
     background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 20px; /* Закругленные углы */
     cursor: pointer;
-    font-size: 16px;
+    font-size: 3%;
     display: none;
     margin-top: 20px;
 }
