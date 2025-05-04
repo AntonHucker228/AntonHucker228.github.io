@@ -2,24 +2,25 @@
 <html>
 <head>
     <title>Кто ты из итальянских существ?</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="container">
         <div id="cover">
             <h1>Узнай, кто ты!</h1>
-            <img src="" alt="Обложка" id="coverImage">
+            <img src="img/cover.jpg" alt="Обложка" id="coverImage">
             <button id="playButton">Играть</button>
         </div>
-        <div id="quiz">
+        <div id="quiz" style="display: none;">
             <div id="question"></div>
             <div id="answers"></div>
             <button id="nextButton">Следующий</button>
         </div>
-        <div id="result">
-            <p>Ты - Бомбардило Крокодило!</p>
-            <img src="" alt="Бомбардило Крокодило">
+
+        <!-- Блок с результатом -->
+        <div id="result" style="display: none;">
+            <h1>Ты - Бомбардило Крокодило!</h1>
+            <img src="img/bombodil1.jpg" alt="Бомбардило Крокодило" width="200">
         </div>
     </div>
     <script src="script.js"></script>
